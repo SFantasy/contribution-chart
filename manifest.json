@@ -1,12 +1,15 @@
 {
   "name": "contribution-chart",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Draw Github's contribution graph in line chart",
   "content_scripts": [{
     "css": [ "contribution.css" ],
     "js": [ "lib/jquery-2.1.1.js", "lib/jquery.flot.js", "contribution.js" ],
     "matches": [ "http://github.com/*", "https://github.com/*" ]
   }],
-  "icons": {},
+  "icons": {
+    "48": "logo48.png",
+    "128": "logo128.png"
+  },
   "manifest_version": 2
 }
