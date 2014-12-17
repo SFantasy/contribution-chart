@@ -42,7 +42,7 @@ var Contribution = (function () {
     $('body').append($('<div class="contribution-chart-container contribution-chart-hidden"><span class="contribution-chart-close">X</span><div id="contribution-chart-placeholder"></div></div>'));
 
     // CC toggle
-    $('<p class="contribution-chart-toggle">View contribution in line chart.</p>').insertBefore($('.contributions-tab .boxed-group.flush').get(2));
+    $('<p class="contribution-chart-toggle">View contributions in line chart.</p>').insertBefore($('.contributions-tab .boxed-group.flush').get(2));
 
     $.plot('#contribution-chart-placeholder', [{
       data: _this.data,
@@ -55,7 +55,7 @@ var Contribution = (function () {
     });
 
     $('.contribution-chart-close').on('click', function () {
-      $('.contribution-chart-container').removeClass('contribution-chart-hidden');
+      $('.contribution-chart-container').addClass('contribution-chart-hidden');
     });
   };
 
