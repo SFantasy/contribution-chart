@@ -1,7 +1,7 @@
 {
   "name": "contribution-chart",
-  "version": "0.0.1",
-  "description": "Draw Github's contribution graph in chart",
+  "version": "0.1.0",
+  "description": "Draw Github's contribution graph in line chart",
   "content_scripts": [{
     "css": [ "contribution.css" ],
     "js": [ "lib/jquery-2.1.1.js", "lib/jquery.flot.js", "contribution.js" ],
