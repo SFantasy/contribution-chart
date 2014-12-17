@@ -5,7 +5,7 @@ Chrome extension to view Github contributions in line-chart by [Flot](http://www
 
 ## Install
 
-- Download on the [release](https://github.com/SFantasy/contribution-chart/releases) page
+- Download on the extension [here](http://7b1exy.com1.z0.glb.clouddn.com/contribution-chart.crx)
 - Drag the `.crx` file into your Chrome
 
 ## License
