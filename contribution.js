@@ -30,7 +30,8 @@ var Contribution = (function () {
       days = $('rect.day', $(_this.target));
 
       days.each(function (i, item) {
-        _this.data.push([i, $(item).data('count')]);
+        var date = new Date($(item).attr('data-date')).getTime();
+        _this.data.push([date, $(item).data('count')]);
       });
     }
   };
@@ -44,11 +45,19 @@ var Contribution = (function () {
     // CC toggle
     $('<p class="contribution-chart-toggle">View contributions in line chart.</p>').insertBefore($('.contributions-tab .boxed-group.flush').get(2));
 
-    $.plot('#contribution-chart-placeholder', [{
-      data: _this.data,
-      color: '#8cc665',
-      lines: { show: true }
-    }]);
+    $.plot('#contribution-chart-placeholder', [_this.data], {
+      series: {
+        color: '#8cc665',
+        lines: {
+          show: true,
+          shadowSize: 0
+        }
+      },
+      xaxis: {
+        mode: 'time',
+        timeformat: '%m-%d'
+      }
+    });
 
     $('.contribution-chart-toggle').on('click', function () {
       $('.contribution-chart-container').toggleClass('contribution-chart-hidden');
